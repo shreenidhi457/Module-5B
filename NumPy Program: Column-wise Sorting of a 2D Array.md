@@ -14,13 +14,15 @@ To write a **NumPy** program that sorts the elements in each column of a given 2
 ## 🧾 Program
 ~~~
 import numpy as np
-x = np.array([10, 5, 8, 12, 3])
-y = np.array([7, 5, 10, 10, 4])
-indices = np.where(x >= y)
-print("Array x:", x)
-print("Array y:", y)
-print("Indices where x >= y:", indices)
-print("Values from x where condition is true:", x[indices])
+d=np.array([[34,43,73],[82,22,12],[53,94,66]])
+print("Printing Original array")
+print(d)
+s=d[:,d[1].argsort()]
+print("Sorting Original array by second row")
+print(s)
+a=d[d[:,1].argsort()]
+print("Sorting Original array by second column")
+print(a)
 ~~~
 
 ## Output
